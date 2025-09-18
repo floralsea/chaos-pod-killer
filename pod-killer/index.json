@@ -1,48 +1,28 @@
 {
-    "title": "Chaos Engineering with LitmusChaos: Pod Kill Experiment",
-    "summary": "Testing Service Self-Healing Capabilities Using LitmusChaos' Pod-Delete Experiments in Kubernetes Clusters (Killercoda Environment Demonstration)",
-    "difficulty": "Beginner",
-    "time": "20 minutes",
-    "details": {
-        "steps": [
-            {
-                "title": "Step 1: Deploy demo app",
-                "text": "step1.md"
-            },
-            {
-                "title": "Step 2: Install LitmusChaos",
-                "text": "step2.md"
-            },
-            {
-                "title": "Step 3: Run pod-delete experiment",
-                "text": "step3.md"
-            },
-            {
-                "title": "Step 4: Observe and analyze",
-                "text": "step4.md"
-            }
-        ],
-        "assets": {
-            "client": [
-                {
-                    "file": "pod-killer/assets/app-deploy.yaml",
-                    "target": "/root/app-deploy.yaml"
-                },
-                {
-                    "file": "pod-killer/assets/chaosengine-poddelete.yaml",
-                    "target": "/root/chaosengine-poddelete.yaml"
-                },
-                {
-                    "file": "pod-killer/assets/prereq.sh",
-                    "target": "/root/prereq.sh"
-                }
-            ]
-        }
+  "title": "Chaos Engineering with LitmusChaos: Pod Kill Experiment",
+  "summary": "Testing Service Self-Healing Capabilities Using LitmusChaos' Pod-Delete Experiments in Kubernetes Clusters (Killercoda Environment Demonstration)",
+  "difficulty": "Beginner",
+  "time": "20 minutes",
+  "details": {
+    "steps": [
+      { "title": "Step 1: Deploy demo app", "text": "step1.md" },
+      { "title": "Step 2: Install LitmusChaos", "text": "step2.md" },
+      { "title": "Step 3: Run pod-delete experiment", "text": "step3.md" },
+      { "title": "Step 4: Observe and analyze", "text": "step4.md" }
+    ],
+    "assets": {
+      "client": [
+        { "file": "assets/app-deploy.yaml", "target": "/root/app-deploy.yaml" },
+        { "file": "assets/chaosengine-poddelete.yaml", "target": "/root/chaosengine-poddelete.yaml" },
+        { "file": "assets/prereq.sh", "target": "/root/prereq.sh" }
+      ]
     },
-    "environment": {
-        "showdashboard": false
-    },
-    "backend": {
-        "imageid": "kubernetes-kubeadm-2nodes"
+    "onStart": {
+      "client": [
+        "bash /root/prereq.sh || true"
+      ]
     }
+  },
+  "environment": { "showdashboard": false },
+  "backend": { "imageid": "kubernetes-kubeadm-2nodes" }
 }
