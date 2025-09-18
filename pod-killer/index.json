@@ -1,6 +1,6 @@
 {
   "title": "Chaos Engineering with LitmusChaos: Pod Kill Experiment",
-  "summary": "Testing Service Self-Healing Capabilities Using LitmusChaos' Pod-Delete Experiments in Kubernetes Clusters (Killercoda Environment Demonstration)",
+  "summary": "Testing Service Self-Healing Capabilities Using LitmusChaos' Pod-Delete experiment",
   "difficulty": "Beginner",
   "time": "20 minutes",
   "details": {
@@ -11,14 +11,15 @@
       { "title": "Step 4: Observe and analyze", "text": "step4.md" }
     ],
     "assets": {
-      "client": [
-        { "file": "assets/app-deploy.yaml", "target": "/root/app-deploy.yaml" },
-        { "file": "assets/chaosengine-poddelete.yaml", "target": "/root/chaosengine-poddelete.yaml" },
-        { "file": "assets/prereq.sh", "target": "/root/prereq.sh" }
+      "host01": [
+        { "file": "assets/app-deploy.yaml",           "target": "/root/app-deploy.yaml" },
+        { "file": "assets/chaosengine-poddelete.yaml","target": "/root/chaosengine-poddelete.yaml" },
+        { "file": "assets/prereq.sh",                 "target": "/root/prereq.sh" }
       ]
     },
     "onStart": {
-      "client": [
+      "host01": [
+        "chmod +x /root/prereq.sh || true",
         "bash /root/prereq.sh || true"
       ]
     }
