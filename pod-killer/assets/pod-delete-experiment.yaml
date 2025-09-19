@@ -2,11 +2,6 @@ apiVersion: litmuschaos.io/v1alpha1
 kind: ChaosExperiment
 metadata:
   name: pod-delete
-  labels:
-    name: pod-delete
-    app.kubernetes.io/part-of: litmus
-    app.kubernetes.io/component: chaosexperiment
-    app.kubernetes.io/version: 2.14.0
 spec:
   definition:
     scope: Namespaced
@@ -50,9 +45,3 @@ spec:
       value: ''
     - name: RAMP_TIME
       value: ''
-    labels:
-      name: pod-delete
-      app.kubernetes.io/part-of: litmus
-      app.kubernetes.io/component: chaosexperiment
-      app.kubernetes.io/version: 2.14.0
-    name: pod-delete

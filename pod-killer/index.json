@@ -50,7 +50,7 @@
           "chmod": "+w"
         },
         {
-          "file": "chaosengine-poddelete.yaml",
+          "file": "pod-delete-experiment.yaml",
           "target": "/root",
           "chmod": "+w"
         },
@@ -61,6 +61,16 @@
         },
         {
           "file": "litmus-operator.yaml",
+          "target": "/root",
+          "chmod": "+w"
+        },
+        {
+          "file": "pod-delete-engine.yaml",
+          "target": "/root",
+          "chmod": "+w"
+        },
+        {
+          "file": "rbac-default.yaml",
           "target": "/root",
           "chmod": "+w"
         }
