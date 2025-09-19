@@ -7,33 +7,33 @@
     "steps": [
       {
         "title": "Environment Preparation",
-        "text": "text.md",
-        "code": "verify.sh"
+        "text": "step1/text.md",
+        "code": "step1/verify.sh"
       },
       {
         "title": "Deploy Sample Application",
-        "text": "text.md",
-        "code": "verify.sh"
+        "text": "step2/text.md",
+        "code": "step2/verify.sh"
       },
       {
         "title": "Install Litmus Chaos Framework",
-        "text": "text.md",
-        "code": "verify.sh"
+        "text": "step3/text.md",
+        "code": "step3/verify.sh"
       },
       {
         "title": "Execute Pod Delete Experiment",
-        "text": "text.md",
-        "code": "verify.sh"
+        "text": "step4/text.md",
+        "code": "step4/verify.sh"
       },
       {
         "title": "Verify Experiment Results",
-        "text": "text.md",
-        "code": "verify.sh"
+        "text": "step5/text.md",
+        "code": "step5/verify.sh"
       },
       {
         "title": "Cleanup Environment",
-        "text": "text.md",
-        "code": "verify.sh"
+        "text": "step6/text.md",
+        "code": "step6/verify.sh"
       }
     ],
     "intro": {
