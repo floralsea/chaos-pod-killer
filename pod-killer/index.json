@@ -1,58 +1,54 @@
 {
-  "title": "Chaos Engineering with LitmusChaos: Pod Kill Experiment",
-  "summary": "Testing Service Self-Healing Capabilities Using LitmusChaos' Pod-Delete experiment",
+  "title": "Pod Delete Chaos Experiment",
+  "description": "Learn how to perform a Pod Delete chaos engineering experiment",
   "difficulty": "Beginner",
   "time": "20 minutes",
   "details": {
     "steps": [
       {
-        "title": "Step 1: Deploy demo app",
-        "text": "step1.md"
+        "title": "Environment Preparation",
+        "text": "text.md",
+        "code": "verify.sh"
       },
       {
-        "title": "Step 2: Install LitmusChaos",
-        "text": "step2.md"
+        "title": "Deploy Sample Application",
+        "text": "text.md",
+        "code": "verify.sh"
       },
       {
-        "title": "Step 3: Run pod-delete experiment",
-        "text": "step3.md"
+        "title": "Install Litmus Chaos Framework",
+        "text": "text.md",
+        "code": "verify.sh"
       },
       {
-        "title": "Step 4: Observe and analyze",
-        "text": "step4.md"
+        "title": "Execute Pod Delete Experiment",
+        "text": "text.md",
+        "code": "verify.sh"
+      },
+      {
+        "title": "Verify Experiment Results",
+        "text": "text.md",
+        "code": "verify.sh"
+      },
+      {
+        "title": "Cleanup Environment",
+        "text": "text.md",
+        "code": "verify.sh"
       }
     ],
-    "assets": {
-      "host01": [
-        {
-          "file": "/app-deploy.yaml",
-          "target": "/app-deploy.yaml"
-        },
-        {
-          "file": "/chaosengine-poddelete.yaml",
-          "target": "/chaosengine-poddelete.yaml"
-        },
-        {
-          "file": "/prereq.sh",
-          "target": "/prereq.sh"
-        },
-        {
-          "file": "litmus-operator.yaml",
-          "target": "/litmus-operator.yaml"
-        }
-      ]
+    "intro": {
+      "text": "intro.md",
+      "code": "intro.sh"
     },
-    "onStart": {
-      "host01": [
-        "chmod +x /prereq.sh || true",
-        "bash /prereq.sh || true"
-      ]
+    "finish": {
+      "text": "finish.md"
     }
   },
   "environment": {
-    "showdashboard": false
+    "uilayout": "terminal",
+    "uimessage1": "Waiting for Kubernetes cluster to be ready..."
   },
   "backend": {
-    "imageid": "kubernetes-kubeadm-2nodes"
+    "imageid": "kubernetes"
   }
 }
