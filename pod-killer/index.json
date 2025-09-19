@@ -41,6 +41,30 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "app-deploy.yaml",
+          "target": "/root",
+          "chmod": "+w"
+        },
+        {
+          "file": "chaosengine-poddelete.yaml",
+          "target": "/root",
+          "chmod": "+w"
+        },
+        {
+          "file": "litmus-crds.yaml",
+          "target": "/root",
+          "chmod": "+w"
+        },
+        {
+          "file": "litmus-operator.yaml",
+          "target": "/root",
+          "chmod": "+w"
+        }
+      ]
     }
   },
   "environment": {
