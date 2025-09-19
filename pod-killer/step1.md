@@ -6,7 +6,7 @@ This allows us to see which Pod is responding to user requests.
 Run the following commands to create the Deployment and Service:
 
 ```bash
-kubectl apply -f /root/app-deploy.yaml
+kubectl apply -f /app-deploy.yaml
 kubectl rollout status deployment/demo
 kubectl get pods -o wide
 kubectl get svc demo-svc
