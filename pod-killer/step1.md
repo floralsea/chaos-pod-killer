@@ -20,10 +20,23 @@ Start a load generator Pod:
 ```bash
 kubectl run -i --tty loadgen --image=radial/busyboxplus:curl --restart=Never -- /bin/sh
 ```
-Inside the new shell, run:
+
+Inside the new shell, you can run:
+```bash
+# run for 10 seconds
+timeout 10 sh -c 'while true; do date; curl -sS demo-svc:80/; echo; sleep 1; done'
+```
+
+Instead, you can also run, but this is a infinite loop:
 ```bash
 while true; do date; curl -sS demo-svc:80/; echo; sleep 1; done
 ```
+If you want to exit, you should run the following commandline in another terminal, i.e., open another `Tab` and input:
+```bash
+kubectl delete pod loadgen
+```
+The shell will shut down later.
+
 You should see output like:
 ```bash
 Mon Sep 15 10:01:23 UTC 2025

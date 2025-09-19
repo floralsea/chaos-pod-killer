@@ -5,25 +5,54 @@
   "time": "20 minutes",
   "details": {
     "steps": [
-      { "title": "Step 1: Deploy demo app", "text": "step1.md" },
-      { "title": "Step 2: Install LitmusChaos", "text": "step2.md" },
-      { "title": "Step 3: Run pod-delete experiment", "text": "step3.md" },
-      { "title": "Step 4: Observe and analyze", "text": "step4.md" }
+      {
+        "title": "Step 1: Deploy demo app",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2: Install LitmusChaos",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3: Run pod-delete experiment",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4: Observe and analyze",
+        "text": "step4.md"
+      }
     ],
     "assets": {
       "host01": [
-        { "file": "/app-deploy.yaml",           "target": "/app-deploy.yaml" },
-        { "file": "/chaosengine-poddelete.yaml","target": "/chaosengine-poddelete.yaml" },
-        { "file": "/prereq.sh",                 "target": "/prereq.sh" }
+        {
+          "file": "/app-deploy.yaml",
+          "target": "/app-deploy.yaml"
+        },
+        {
+          "file": "/chaosengine-poddelete.yaml",
+          "target": "/chaosengine-poddelete.yaml"
+        },
+        {
+          "file": "/prereq.sh",
+          "target": "/prereq.sh"
+        },
+        {
+          "file": "litmus-operator.yaml",
+          "target": "/litmus-operator.yaml"
+        }
       ]
     },
     "onStart": {
       "host01": [
-        "chmod +x /root/prereq.sh || true",
-        "bash /root/prereq.sh || true"
+        "chmod +x /prereq.sh || true",
+        "bash /prereq.sh || true"
       ]
     }
   },
-  "environment": { "showdashboard": false },
-  "backend": { "imageid": "kubernetes-kubeadm-2nodes" }
+  "environment": {
+    "showdashboard": false
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
 }
