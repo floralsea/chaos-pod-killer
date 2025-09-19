@@ -73,6 +73,16 @@
           "file": "rbac-default.yaml",
           "target": "/root",
           "chmod": "+w"
+        },
+        {
+          "file": "litmus-rbac.yaml",
+          "target": "/root",
+          "chmod": "+w"
+        },
+        {
+          "file": "chaosengine-poddelete.yaml",
+          "target": "/root",
+          "chmod": "+w"
         }
       ]
     }

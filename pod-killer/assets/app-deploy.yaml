@@ -8,7 +8,6 @@ spec:
   ports:
   - port: 80
     targetPort: 5678
-
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -27,13 +26,12 @@ spec:
       containers:
       - name: demo
         image: hashicorp/http-echo:0.2.3
-        args:
-          - "-text=hello from pod $(HOSTNAME)"
+        args: ["-text=hello from pod $(HOSTNAME)"]
         env:
-          - name: HOSTNAME
-            valueFrom:
-              fieldRef:
-                fieldPath: metadata.name
+        - name: HOSTNAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
         ports:
         - containerPort: 5678
         readinessProbe:
